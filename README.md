@@ -114,59 +114,6 @@ This notebook is organized into **4 major sections**:
 
 ---
 
-## 🧠 Neural Network Architectures
-
-### Architecture 1 — ANN with Text Sequences
-```
-Input → Embedding → Flatten → Dense(64, ReLU) → Dense(1, Sigmoid)
-```
-
-### Architecture 2 — ANN + Embedding
-```
-Input → Embedding → GlobalAvgPool → Dense(64) → Dense(1, Sigmoid)
-```
-
-### Architecture 3 — LSTM + Embedding
-```
-Input → Embedding → LSTM(64) → Dense(1, Sigmoid)
-```
-
-### Architecture 4 — GRU + Embedding
-```
-Input → Embedding → GRU(64) → Dense(1, Sigmoid)
-```
-
-### Architecture 5 — Bidirectional GRU + Embedding
-```
-Input → Embedding → Bidirectional(GRU(64)) → Dense(1, Sigmoid)
-```
-
-### Architecture 6 — Bidirectional LSTM + Embedding ⭐ Best
-```
-Input → Embedding → Bidirectional(LSTM(64)) → Dropout(0.5)
-      → Dense(32, ReLU) → Dropout(0.3) → Dense(1, Sigmoid)
-```
-
-### Architecture 7 — Conv1D + Embedding
-```
-Input → Embedding → Conv1D(128, kernel=5) → MaxPooling
-      → Dense(64, ReLU) → Dense(1, Sigmoid)
-```
-
-### Architecture 8 — Custom Word2Vec + Conv1D
-```
-Input → Word2Vec Embedding Matrix → Conv1D(128)
-      → GlobalMaxPool → Dense(64) → Dense(1, Sigmoid)
-```
-
-### Architecture 9 — Custom Word2Vec + Bidirectional LSTM
-```
-Input → Word2Vec Embedding Matrix → Bidirectional(LSTM(64))
-      → Dense(32) → Dense(1, Sigmoid)
-```
-
----
-
 ## 📈 Model Performance Comparison
 
 | # | Model | Encoding | Accuracy |
